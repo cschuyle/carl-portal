@@ -4,7 +4,7 @@ author: "Carlton Schuyler"
 description: "A Portal to Online Me"
 ---
 
-I've created this portal in the hopes that I (or you!) can find pretty much all the important stuff, and the some! (about me).
+I've created this portal in the hopes that I (or you!) can find pretty much all the important stuff, and then some! (about me).
 
 <style>
   .appleii {
@@ -43,7 +43,7 @@ I'm torn, but still partial to strongly typed static languages for anything more
 
 # Where
 
-Originally, I'm from the Willamette <kbd>/wil-LAM-met/</kbd> Valley in Oregon <kbd>/OR-uh-gun/</kbd>, specifically Lake Oswego <kbd>/os-WEE-go/</kbd>. For most of my life I've lived in the United States. Currently I'm in the Front Range of Colorado (between Fort Collins and Pueblo), where i've been for quite a while. I went to University in the Boston area, followed immediately by Graduate School in Ohio (interrupted by a semester in Budapest, and another doing FORTRAN at Argonne National Laboratory near Chicago). I've lived and worked in the Washington, D.C. area, and courtesy of being a Roving Coding Consultant, spent many a month in residence hotels: from Madison and Chicago, to San Antonio, to Philadelphia, to Cincinnati, to San Francisco, Berkeley and Oakland. 
+Originally, I'm from the Willamette <kbd>/wil-LAM-met/</kbd> Valley in Oregon <kbd>/OR-uh-gun/</kbd>, specifically Lake Oswego <kbd>/os-WEE-go/</kbd>. For most of my life I've lived in the United States. Currently I'm in the Front Range of Colorado (between Fort Collins and Pueblo), where I've been for quite a while. I went to University in the Boston area, followed immediately by Graduate School in Ohio (interrupted by a semester in Budapest, and another doing FORTRAN at Argonne National Laboratory near Chicago). I've lived and worked in the Washington, D.C. area, and courtesy of being a Roving Coding Consultant, spent many a month in residence hotels: from Madison and Chicago, to San Antonio, to Philadelphia, to Cincinnati, to San Francisco, Berkeley and Oakland; not to mention Shanghai and Bengaluru. 
 
 ## ... also, Not Here
 I've also lived quite a few years outside the USA: in Costa Rica (ten years), Belgium (where I spent middle and high school), Budapest (where I realized that my Math abilities are not quite what Hungarian education demands), and Düsseldorf (where my food and travel fixations found their happy place). 
