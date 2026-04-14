@@ -1,0 +1,7 @@
+language - programming
+language - culture
+language - travel
+books - imagination
+travel - food
+travel - history
+travel - society
