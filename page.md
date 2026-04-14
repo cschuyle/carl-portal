@@ -27,7 +27,7 @@ I've created this portal in the hopes that I (or you!) can find pretty much all 
 
 I'm a Software Engineer, Hands-On Technical Leader, Coding Architect, Versatile Developer. I strive to write applications that not only work, but are also simpler and more powerful than the status quo.
 
-I've built desktop, mobile, server, distributed, and multi-modal automated systems. I specialize in modern tooling (including AI models and agentic coding), modern architectures (scalable, servlerless, event-based), the usual suspects in terms of APIs (REST, GraphQL, queues, and recently, MCP) and data stores (relational, graph, vector, key-value, document databases). 
+I've built desktop, mobile, server, distributed, and multi-modal automated systems. I specialize in modern tooling (including AI models and agentic coding), modern architectures (scalable, serverless/lambda, event-based), APIs (REST, GraphQL, queues, and recently, MCP) and data stores (relational, graph, vector, key-value, document databases).
 
 I'm versed in frontend (React), text search (Lucene, MiniSearch, Elasticsearch), semantic processing, data/stream processing frameworks (Spark, Ray, BigQuery, DataBricks); automation (pipelines, scripting to an extreme); all kinds of testing, profiling, and and validation; and platform stuff: hosting in various cloud providers as well as generic Kubernetes; reliability, observability, metrics. All that.
 
