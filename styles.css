@@ -5,15 +5,24 @@
     --navbar-font-color: var(--bs-white-rgb);
     --navbar-bg-color: var(--bs-dark-rgb);
     --bd-toc-color: rgba(var(--bs-dark-rgb), 1);
-    --heading-h1-color: #4f46e5;
-    --heading-h2-color: #6d28d9;
+    /* Restrained launcher / tracker palette: slate + cool cyan */
+    --heading-h1-color: #164e63;
+    --heading-h2-color: #0f5c6b;
+    --hud-accent: #0e7490;
+    --nav-text: rgba(226, 232, 240, 0.82);
+    --nav-hover: #5ab4d6;
+    --nav-active: #e2e8f0;
 }
 
 /* Dark Theme Variables */
 [data-bs-theme="dark"] {
     --bd-toc-color: rgba(var(--bs-white-rgb), 1);
-    --heading-h1-color: #818cf8;
-    --heading-h2-color: #a78bfa;
+    --heading-h1-color: #7eb8d6;
+    --heading-h2-color: #8ec5e0;
+    --hud-accent: #3d7a96;
+    --nav-text: rgba(203, 213, 225, 0.78);
+    --nav-hover: #7dd3fc;
+    --nav-active: #f1f5f9;
 }
 
 /* General Link Styles */
@@ -87,6 +96,12 @@ blockquote {
 /* Footer Styles */
 .footer {
     font-size: 0.875rem;
+    border-top: 1px solid var(--hud-accent);
+    box-shadow: 0 -3px 14px rgba(14, 116, 144, 0.22);
+}
+
+html[data-bs-theme="dark"] .footer {
+    box-shadow: 0 -2px 12px rgba(125, 211, 252, 0.08);
 }
 
 /* Navbar Styles */
@@ -98,14 +113,18 @@ blockquote {
 }
 
 .navbar {
-    border-bottom: 2px solid #39ff14;
-    box-shadow: 0 4px 16px rgba(57, 255, 20, 0.45);
+    border-bottom: 1px solid var(--hud-accent);
+    box-shadow: 0 3px 14px rgba(14, 116, 144, 0.22);
+}
+
+html[data-bs-theme="dark"] .navbar {
+    box-shadow: 0 2px 12px rgba(125, 211, 252, 0.08);
 }
 
 /* Navbar Brand Styles */
 .navbar .navbar-brand,
 .navbar .navbar-brand:hover {
-    color: rgba(var(--navbar-font-color), 1);
+    color: var(--nav-active);
     transform: none;
 }
 
@@ -113,14 +132,19 @@ blockquote {
 .navbar .nav-link,
 .navbar .nav-line,
 .navbar .navbar-toggler {
-    color: rgba(var(--navbar-font-color), 0.85);
+    color: var(--nav-text);
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link.active,
-.navbar .nav-link.show,
+.navbar .nav-link:not(.active):hover,
+.navbar .nav-link.show:not(.active),
 .navbar .navbar-toggler:hover {
-    color: rgba(var(--navbar-font-color), 1);
+    color: var(--nav-hover);
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link.active:hover {
+    color: var(--nav-active);
+    font-weight: 600;
 }
 
 /* Navbar Dropdown Menu Styles */
