@@ -74,7 +74,7 @@ I've also become much more interested in audiobooks (because: eyesight, roadtrip
 
 ## Oh and I collect
 
-... Unfortunately. Books (these are heavy, and they dislike humidity). Beer glasses (these are bulky and fragile). Glassware (ditto). Blurays (these ate least are lightweight and more or less durable). My house is literally sinking into the bentonite sea upon which one builds houses in much of the Front Range.
+... Unfortunately. Books (these are heavy, and they dislike humidity). Beer glasses (these are bulky and fragile). Glassware (ditto). Blurays (these at least are lightweight and more or less durable). My house is literally sinking - picture your favorite 1970's quicksand scene; or better yet, find non-Newtonian fluid videos on YouTube! - into the bentonite sea upon which one builds houses in much of the Front Range.
 
 ## Eat, Drink, Cook
 

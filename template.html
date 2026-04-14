@@ -79,35 +79,72 @@
       document.addEventListener("DOMContentLoaded", () => {
 	  const htmlElement = document.documentElement;
 	  const highlightStyle = document.getElementById("highlight-style");
-	  
-	  // Function to update Highlight.js style based on theme
-	  const updateHighlightStyle = (theme) => {
-              const lightTheme = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-light.min.css";
-              const darkTheme = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github-dark.min.css";
-              highlightStyle.href = theme === "dark" ? darkTheme : lightTheme;
+
+	  const SURPRISE_PALETTES = [
+	      { id: "sp-aurora", bs: "dark", palette: "aurora" },
+	      { id: "sp-ember", bs: "dark", palette: "ember" },
+	      { id: "sp-nocturne", bs: "dark", palette: "nocturne" },
+	      { id: "sp-moss", bs: "dark", palette: "moss" },
+	      { id: "sp-ruby", bs: "dark", palette: "ruby" },
+	      { id: "sp-aurum", bs: "dark", palette: "aurum" },
+	      { id: "sp-steel", bs: "dark", palette: "steel" },
+	      { id: "sp-ice", bs: "light", palette: "ice" },
+	      { id: "sp-dusk", bs: "light", palette: "dusk" },
+	      { id: "sp-sage", bs: "light", palette: "sage" },
+	  ];
+
+	  const updateHighlightStyle = (bsTheme) => {
+	      const lightTheme = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-light.min.css";
+	      const darkTheme = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github-dark.min.css";
+	      highlightStyle.href = bsTheme === "dark" ? darkTheme : lightTheme;
 	  };
-	  
-	  // Function to set the theme
-	  const setTheme = (theme) => {
-              htmlElement.setAttribute("data-bs-theme", theme);
-              localStorage.setItem("theme", theme); // Save the theme to localStorage
-              updateHighlightStyle(theme);
+
+	  const applyBasicTheme = (bsTheme) => {
+	      htmlElement.removeAttribute("data-portal-palette");
+	      htmlElement.setAttribute("data-bs-theme", bsTheme);
+	      localStorage.setItem("theme", bsTheme);
+	      updateHighlightStyle(bsTheme);
 	  };
-	  
-	  // Get saved theme from localStorage or fallback to default ("light")
-	  const savedTheme = localStorage.getItem("theme") || "light";
-	  setTheme(savedTheme);
-	  
-	  // Event listener for theme dropdown
-	  document.querySelectorAll(".dropdown-item").forEach((item) => {
-              item.addEventListener("click", (e) => {
-		  e.preventDefault();
-		  const selectedTheme = item.getAttribute("data-theme");
-		  setTheme(selectedTheme);
-              });
-	  });
-	  
-	  // Initialize Highlight.js
+
+	  const applySurprisePalette = (entry) => {
+	      htmlElement.setAttribute("data-bs-theme", entry.bs);
+	      htmlElement.setAttribute("data-portal-palette", entry.palette);
+	      localStorage.setItem("theme", entry.id);
+	      updateHighlightStyle(entry.bs);
+	  };
+
+	  const restoreTheme = () => {
+	      const stored = localStorage.getItem("theme") || "light";
+	      if (stored === "light" || stored === "dark") {
+		  applyBasicTheme(stored);
+		  return;
+	      }
+	      const entry = SURPRISE_PALETTES.find((p) => p.id === stored);
+	      if (entry) {
+		  applySurprisePalette(entry);
+		  return;
+	      }
+	      applyBasicTheme("light");
+	  };
+
+	  restoreTheme();
+
+	  document
+	      .querySelectorAll('ul.dropdown-menu[aria-labelledby="themeDropdown"] [data-theme]')
+	      .forEach((item) => {
+		  item.addEventListener("click", (e) => {
+		      e.preventDefault();
+		      const mode = item.getAttribute("data-theme");
+		      if (mode === "surprise") {
+			  const pick =
+			      SURPRISE_PALETTES[Math.floor(Math.random() * SURPRISE_PALETTES.length)];
+			  applySurprisePalette(pick);
+		      } else if (mode === "light" || mode === "dark") {
+			  applyBasicTheme(mode);
+		      }
+		  });
+	      });
+
 	  hljs.highlightAll();
       });
     </script>
