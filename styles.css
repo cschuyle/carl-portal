@@ -5,11 +5,15 @@
     --navbar-font-color: var(--bs-white-rgb);
     --navbar-bg-color: var(--bs-dark-rgb);
     --bd-toc-color: rgba(var(--bs-dark-rgb), 1);
+    --heading-h1-color: #4f46e5;
+    --heading-h2-color: #6d28d9;
 }
 
 /* Dark Theme Variables */
 [data-bs-theme="dark"] {
     --bd-toc-color: rgba(var(--bs-white-rgb), 1);
+    --heading-h1-color: #818cf8;
+    --heading-h2-color: #a78bfa;
 }
 
 /* General Link Styles */
@@ -17,9 +21,45 @@ a {
     text-decoration: none;
 }
 
+/* Viewport gutters: white (light) / black (dark); main column keeps Bootstrap panel tone */
+html {
+    background-color: #fff;
+}
+
+html[data-bs-theme="dark"] {
+    background-color: #000;
+}
+
+body {
+    background-color: transparent;
+}
+
 /* Layout Styles */
 .bd-layout {
     margin-top: calc(var(--navbar-height) + 1.5rem);
+}
+
+.container-xxl.bd-layout {
+    background-color: var(--bs-secondary-bg);
+    border-radius: var(--bs-border-radius-xl, 1rem);
+    border: 1px solid var(--heading-h1-color);
+}
+
+html[data-bs-theme="dark"] .container-xxl.bd-layout {
+    background-color: var(--bs-body-bg);
+}
+
+/* Headings flush left; inset everything else in the article column */
+.bd-content > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(style) {
+    padding-left: 1.25rem;
+}
+
+.bd-main h1 {
+    color: var(--heading-h1-color);
+}
+
+.bd-content h2 {
+    color: var(--heading-h2-color);
 }
 
 /* Code Block Styles */
@@ -55,6 +95,11 @@ blockquote {
     padding-top: var(--navbar-padding);
     padding-bottom: var(--navbar-padding);
     background-image: linear-gradient(rgba(var(--navbar-bg-color), 1), rgba(var(--navbar-bg-color), 0.95));
+}
+
+.navbar {
+    border-bottom: 2px solid #39ff14;
+    box-shadow: 0 4px 16px rgba(57, 255, 20, 0.45);
 }
 
 /* Navbar Brand Styles */
