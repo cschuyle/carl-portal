@@ -10,8 +10,22 @@ Watch and rebuild (but you still get to refresh the browser): `./watch-render.sh
 
 Cloudflare Pages, BOOM, just link github repo - generted index.html file *IS* the home page.
 
-Depends on you ocmimtting latest generated stuff (build.sh) to github.
+Depends on you comitting latest generated stuff (build.sh) to github.
 
-Custom Domain?
+Cloudflare URL: https://carl-portal.pages.dev/
 
-TODO
+
+# Config Cloudflare Pages
+
+cloudflare.com, Pages, create, link to Github account
+
+FORGOT: Deploy to: /
+
+To fix supposedly:
+```
+npm install -g wrangler
+wrangler login
+wrangler pages deploy . --project-name carl-portal
+```
+
+BUT not working, frown.
