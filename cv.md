@@ -1,9 +1,10 @@
 ---
-title: "Detailed CV / Resume"
+title: "Carlton Schuyler"
 author: "Carlton Schuyler"
 description: "Professional experience, education, and skills"
 ---
-| Carlton Schuyler |  carl@dragnon.com | <https://carlschuyler.com>
+
+**Contact:** carl@dragnon.com &nbsp;&nbsp;&nbsp;&nbsp; **Home page:** <https://carlschuyler.com>
 
 <p/>
 
