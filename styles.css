@@ -71,8 +71,18 @@ html[data-bs-theme="dark"] .container-xxl.bd-layout {
     color: var(--heading-h1-color);
 }
 
+.bd-main h1.bd-intro {
+    margin-top: 0;
+    padding-top: 0.25rem !important;
+}
+
 .bd-content h2 {
     color: var(--heading-h2-color);
+}
+
+/* Less space above section headings (stacking with preceding block margins) */
+.bd-content :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: 0.35rem;
 }
 
 /* Right-hand outline (TOC): continuation lines of wrapped entries sit slightly inward */
@@ -277,4 +287,121 @@ html[data-portal-palette="sage"][data-bs-theme="light"] {
     --hud-accent: #15803d;
     --hud-shadow-nav: 0 3px 14px rgba(21, 128, 61, 0.2);
     --hud-shadow-foot: 0 -3px 14px rgba(21, 128, 61, 0.2);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Print (CV page sets class cv-page on <html> via inline script in cv.md)    */
+/* -------------------------------------------------------------------------- */
+@media print {
+    @page {
+        size: letter portrait;
+        margin: 0.5in;
+    }
+
+    html {
+        background: #fff !important;
+    }
+
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        font-size: 11pt;
+        line-height: 1.35;
+    }
+
+    html.cv-page body {
+        font-size: 10pt;
+    }
+
+    .navbar,
+    .bd-toc,
+    .footer {
+        display: none !important;
+    }
+
+    .bd-layout {
+        margin-top: 0 !important;
+    }
+
+    .container-xxl.bd-layout {
+        background: #fff !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .bd-main h1,
+    .bd-content :is(h1, h2, h3, h4, h5, h6) {
+        color: #000 !important;
+    }
+
+    /* Headings on paper: between default scale and overly compact */
+    .bd-main h1 {
+        font-size: 16pt !important;
+    }
+
+    .bd-content h1 {
+        font-size: 15pt !important;
+    }
+
+    .bd-content h2 {
+        font-size: 13pt !important;
+    }
+
+    .bd-content h3 {
+        font-size: 12pt !important;
+    }
+
+    .bd-content :is(h4, h5, h6) {
+        font-size: 11.5pt !important;
+    }
+
+    html.cv-page .bd-main h1 {
+        font-size: 15pt !important;
+    }
+
+    html.cv-page .bd-content h1 {
+        font-size: 14pt !important;
+    }
+
+    html.cv-page .bd-content h2 {
+        font-size: 12.25pt !important;
+    }
+
+    html.cv-page .bd-content h3 {
+        font-size: 11.5pt !important;
+    }
+
+    html.cv-page .bd-content :is(h4, h5, h6) {
+        font-size: 11pt !important;
+    }
+
+    .bd-main h1,
+    .bd-content h2,
+    .bd-content h3 {
+        page-break-after: avoid;
+    }
+
+    .bd-main h1.bd-intro {
+        margin-top: 0 !important;
+        padding-top: 0.15rem !important;
+    }
+
+    .bd-content :is(h1, h2, h3, h4, h5, h6) {
+        margin-top: 0.2rem !important;
+    }
+
+    /* Same paragraph/list inset as screen (must not strip for print) */
+    .bd-content > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(style) {
+        padding-left: 1.25rem !important;
+    }
+
+    a {
+        color: #000 !important;
+        text-decoration: underline;
+    }
 }

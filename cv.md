@@ -4,6 +4,10 @@ author: "Carlton Schuyler"
 description: "Professional experience, education, and skills"
 ---
 
+<script>document.documentElement.classList.add("cv-page");</script>
+
+<p class="d-print-none mb-3"><button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.print()">Print / Save as PDF</button></p>
+
 **Contact:** carl@dragnon.com &nbsp;&nbsp;&nbsp;&nbsp; **Home page:** <https://carlschuyler.com>
 
 <p/>
