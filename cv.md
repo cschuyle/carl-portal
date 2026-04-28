@@ -6,8 +6,6 @@ description: "Professional experience, education, and skills"
 
 <script>document.documentElement.classList.add("cv-page");</script>
 
-<p class="d-print-none mb-3"><button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.print()">Print / Save as PDF</button></p>
-
 **Contact:** carl@dragnon.com &nbsp;&nbsp;&nbsp;&nbsp; **Home page:** <https://carlschuyler.com>
 
 <p/>
@@ -27,7 +25,7 @@ I've never met a programming language I didn't appreciate. I'm happy with my han
 
 **Currently active:** Java, Kotlin, Spring Boot, Python, Bash, TypeScript, Clojure, Datomic, Elasticsearch, Lucene, cloud deployment (Kubernetes, AWS, GCP), AI-assisted coding.
 
-**When I have time:** Agentic systems (MCP etc), Go, Big Bata, deeper AI, NLP, visualization, Scala, React and modern web application frameworks in general.
+**When I have time:** Agentic systems (MCP etc), Go, Big Data, deeper AI, NLP, visualization, Scala, React and modern web application frameworks in general.
 
 **Farther out (interests):** Haskell, F#, Julia, Rust, PureScript, quantum computing, semantic web and RDF.
 
@@ -37,7 +35,9 @@ I've never met a programming language I didn't appreciate. I'm happy with my han
 
 *June 30, 2025 – October 20, 2025 · Westchester, Illinois*
 
-**Tooling:** Java, Snyk, CircleCI, LaunchDarkly, PostgreSQL, Kafka, Amazon Q (Copilot as well), OpenSearch (AWS), Honeycomb, Kubernetes, Retool.
+Built a greenfield asset management system using Java, Springboot, PostgreSQL, Kafka, and AWS OpenSearch. Took lead role in the design and implementation of a workflow framework to ensure data integrity in asset ingestion and sale.
+
+**Tooling:** Snyk, CircleCI, LaunchDarkly, Amazon Q (Copilot as well), Honeycomb, Kubernetes, Retool.
 
 ## Oracle — Principal Member of Technical Staff / Principal Software Developer
 
