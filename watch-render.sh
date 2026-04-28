@@ -30,7 +30,7 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-WATCH=(page.md template.html header.html navbar.html footer.html styles.css)
+WATCH=(*.md template.html header.html navbar.html footer.html styles.css)
 
 collect_watch_files() {
   WATCH_FILES=()

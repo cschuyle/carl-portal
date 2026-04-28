@@ -75,6 +75,14 @@ html[data-bs-theme="dark"] .container-xxl.bd-layout {
     color: var(--heading-h2-color);
 }
 
+/* Right-hand outline (TOC): continuation lines of wrapped entries sit slightly inward */
+#TableOfContents a {
+    display: block;
+    padding-left: 0.55rem;
+    text-indent: -0.55rem;
+    overflow-wrap: break-word;
+}
+
 /* Code Block Styles */
 .hljs {
     padding: 1.25rem 1em !important;
