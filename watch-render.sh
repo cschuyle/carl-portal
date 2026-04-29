@@ -5,11 +5,12 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 cd "$ROOT"
 
-SERVE=false
+SERVE=true
 PORT=8765
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --serve | -s) SERVE=true; shift ;;
+    --no-serve | -n) SERVE=false; shift ;;
     --port)
       PORT="${2:?--port requires a number}"
       shift 2
@@ -19,8 +20,9 @@ while [[ $# -gt 0 ]]; do
       shift
       ;;
     -h | --help)
-      echo "Usage: $0 [--serve|-s] [--port N]"
-      echo "  Renders with ./build.sh, prints file:// and optional http:// links, watches inputs."
+      echo "Usage: $0 [--port N] [--no-serve|-n]"
+      echo "  Renders with ./build.sh, starts http://127.0.0.1:\$PORT/ by default (Python http.server), watches inputs."
+      echo "  Use --no-serve for file:// links only (no local HTTP server)."
       exit 0
       ;;
     *)
@@ -58,14 +60,14 @@ print_links() {
   echo "Rendered:  $ROOT/index.html"
   echo "            $ROOT/cv.html"
   echo "            $ROOT/full-cv.html"
-  echo "Local URL:  file://$ROOT/index.html"
-  echo "            file://$ROOT/cv.html"
-  echo "            file://$ROOT/full-cv.html"
   if $SERVE; then
-    echo "HTTP URL:  http://127.0.0.1:${PORT}/index.html"
-    echo "            http://127.0.0.1:${PORT}/cv.html"
-    echo "            http://127.0.0.1:${PORT}/full-cv.html"
+    echo "Open (HTTP): http://127.0.0.1:${PORT}/index.html"
+    echo "             http://127.0.0.1:${PORT}/cv.html"
+    echo "             http://127.0.0.1:${PORT}/full-cv.html"
   fi
+  echo "file://       file://$ROOT/index.html"
+  echo "              file://$ROOT/cv.html"
+  echo "              file://$ROOT/full-cv.html"
   echo ""
 }
 

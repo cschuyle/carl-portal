@@ -15,9 +15,9 @@ BUILD_DATE=$(python3 -c "import datetime; d=datetime.date.today(); print(d.strft
 sed "s|__BUILD_DATE__|${BUILD_DATE}|g" cv.md | pandoc -f markdown -o cv.html \
   --include-before-body navbar-cv-abbrev.html $COMMON \
   --lua-filter "$STRIP_FILTER" \
-  -M cv_title_nav=true -M abbreviated_cv=true
+  -M cv_title_nav=true -M abbreviated_cv=true -M cv_page=true
 
 sed "s|__BUILD_DATE__|${BUILD_DATE}|g" cv.md | pandoc -f markdown -o full-cv.html \
   --include-before-body navbar-cv-full.html $COMMON \
   --lua-filter "$UNWRAP_FILTER" \
-  -M cv_title_nav=true
+  -M cv_title_nav=true -M cv_page=true

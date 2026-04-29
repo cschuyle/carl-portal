@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-100" data-bs-theme="light">
+<html lang="en" class="h-100$if(cv_page)$ cv-page$endif$" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
     
     <!-- Highlight.js Styles -->
-    <link rel="stylesheet" id="highlight-style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" id="highlight-style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github-dark.min.css">
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="https://ashki23.github.io/docs.css">
@@ -83,85 +83,15 @@
     
     <!-- Highlight.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js" integrity="sha512-6yoqbrcLAHDWAdQmiRlHG4+m0g/CT/V9AGyxabG8j7Jk8j3r3K6due7oqpiRMZqcYe9WM2gPcaNNxnl2ux+3tA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof hljs !== "undefined") hljs.highlightAll();
+      });
+    </script>
     
     $if(mathjax)$
     <!-- Mathjax -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     $endif$
-    
-    <!-- Custom Scripts -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-	  const htmlElement = document.documentElement;
-	  const highlightStyle = document.getElementById("highlight-style");
-
-	  const SURPRISE_PALETTES = [
-	      { id: "sp-aurora", bs: "dark", palette: "aurora" },
-	      { id: "sp-ember", bs: "dark", palette: "ember" },
-	      { id: "sp-nocturne", bs: "dark", palette: "nocturne" },
-	      { id: "sp-moss", bs: "dark", palette: "moss" },
-	      { id: "sp-ruby", bs: "dark", palette: "ruby" },
-	      { id: "sp-aurum", bs: "dark", palette: "aurum" },
-	      { id: "sp-steel", bs: "dark", palette: "steel" },
-	      { id: "sp-ice", bs: "light", palette: "ice" },
-	      { id: "sp-dusk", bs: "light", palette: "dusk" },
-	      { id: "sp-sage", bs: "light", palette: "sage" },
-	  ];
-
-	  const updateHighlightStyle = (bsTheme) => {
-	      const lightTheme = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-light.min.css";
-	      const darkTheme = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github-dark.min.css";
-	      highlightStyle.href = bsTheme === "dark" ? darkTheme : lightTheme;
-	  };
-
-	  const applyBasicTheme = (bsTheme) => {
-	      htmlElement.removeAttribute("data-portal-palette");
-	      htmlElement.setAttribute("data-bs-theme", bsTheme);
-	      localStorage.setItem("theme", bsTheme);
-	      updateHighlightStyle(bsTheme);
-	  };
-
-	  const applySurprisePalette = (entry) => {
-	      htmlElement.setAttribute("data-bs-theme", entry.bs);
-	      htmlElement.setAttribute("data-portal-palette", entry.palette);
-	      localStorage.setItem("theme", entry.id);
-	      updateHighlightStyle(entry.bs);
-	  };
-
-	  const restoreTheme = () => {
-	      const stored = localStorage.getItem("theme") || "light";
-	      if (stored === "light" || stored === "dark") {
-		  applyBasicTheme(stored);
-		  return;
-	      }
-	      const entry = SURPRISE_PALETTES.find((p) => p.id === stored);
-	      if (entry) {
-		  applySurprisePalette(entry);
-		  return;
-	      }
-	      applyBasicTheme("light");
-	  };
-
-	  restoreTheme();
-
-	  document
-	      .querySelectorAll('ul.dropdown-menu[aria-labelledby="themeDropdown"] [data-theme]')
-	      .forEach((item) => {
-		  item.addEventListener("click", (e) => {
-		      e.preventDefault();
-		      const mode = item.getAttribute("data-theme");
-		      if (mode === "surprise") {
-			  const pick =
-			      SURPRISE_PALETTES[Math.floor(Math.random() * SURPRISE_PALETTES.length)];
-			  applySurprisePalette(pick);
-		      } else if (mode === "light" || mode === "dark") {
-			  applyBasicTheme(mode);
-		      }
-		  });
-	      });
-
-	  hljs.highlightAll();
-      });
-    </script>
   </body>
 </html>

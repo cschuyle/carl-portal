@@ -12,13 +12,13 @@ I've created this portal in the hopes that I (or you!) can find pretty much all 
     /* slight blur like scan softness */
     filter: contrast(1.2) brightness(1.1);
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-    
     line-height: 1.05;
-    /* ][ looked different back them */
+    /* ][ looked different back then */
     letter-spacing: -0.7px;
-  
+  }
   .appleii-squash {
     letter-spacing: -0.3em;
+  }
 </style>
 
 ---
