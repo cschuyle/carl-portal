@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Render page.md → page.html (via build.sh), print local URLs, rebuild when inputs change.
+# Rebuild index.html and cv.html via ./build.sh when sources change; print local URLs; optional watch loop.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
@@ -30,7 +30,7 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-WATCH=(*.md template.html header.html navbar.html footer.html styles.css)
+WATCH=(*.md template.html header.html navbar.html navbar-cv.html footer.html styles.css)
 
 collect_watch_files() {
   WATCH_FILES=()
@@ -54,19 +54,21 @@ build_page() {
 }
 
 print_links() {
-  local abs="$ROOT/page.html"
   echo ""
-  echo "Rendered:  $abs"
-  echo "Local URL: file://$abs"
+  echo "Rendered:  $ROOT/index.html"
+  echo "            $ROOT/cv.html"
+  echo "Local URL:  file://$ROOT/index.html"
+  echo "            file://$ROOT/cv.html"
   if $SERVE; then
-    echo "HTTP URL:  http://127.0.0.1:${PORT}/page.html"
+    echo "HTTP URL:  http://127.0.0.1:${PORT}/index.html"
+    echo "            http://127.0.0.1:${PORT}/cv.html"
   fi
   echo ""
 }
 
 collect_watch_files
 if [[ ${#WATCH_FILES[@]} -eq 0 ]]; then
-  echo "No watched files found yet (${WATCH[*]}). Add at least page.md (and templates) to this directory." >&2
+  echo "No watched files found yet (${WATCH[*]}). Add markdown sources and templates to this directory." >&2
   exit 1
 fi
 

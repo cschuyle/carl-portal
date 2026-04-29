@@ -6,4 +6,7 @@ cd "$ROOT"
 COMMON="--template template.html --include-in-header header.html --include-after-body footer.html --standalone --no-highlight --toc --toc-depth 2 --mathjax"
 
 pandoc index.md -o index.html --include-before-body navbar.html $COMMON
-pandoc cv.md -o cv.html --include-before-body navbar-cv.html $COMMON
+
+# Human-readable "Month D, YYYY" for cv.md **Updated:** __BUILD_DATE__
+BUILD_DATE=$(python3 -c "import datetime; d=datetime.date.today(); print(d.strftime('%B') + ' ' + str(d.day) + ', ' + str(d.year))")
+sed "s|__BUILD_DATE__|${BUILD_DATE}|g" cv.md | pandoc -f markdown -o cv.html --include-before-body navbar-cv.html $COMMON
