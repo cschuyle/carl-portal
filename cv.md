@@ -2,9 +2,10 @@
 title: "Carlton Schuyler"
 author: "Carlton Schuyler"
 description: "Professional experience, education, and skills"
+cv_tmi_toggle: true
 ---
 
-<script>document.documentElement.classList.add("cv-page");</script>
+<script>document.documentElement.classList.add("cv-page", "cv-abbrev");</script>
 
 **Contact:** carl@dragnon.com &nbsp;&nbsp;&nbsp;&nbsp; **Home page:** <https://carlschuyler.com> &nbsp;&nbsp;&nbsp;&nbsp; **Updated:** __BUILD_DATE__
 
@@ -79,6 +80,8 @@ Process was grounded in agile and lean practice: continuous deployment, Scrum, p
 - Modernized and expanded full-text search (Solr upgrade, faceting, boosting, relevance); re-architected deployment and moved search stack toward **Elasticsearch**.
 - **Object change notification** infrastructure to collect, aggregate, and distribute changes across components and external applications—Clojure-centric greenfield work including **Datomic**.
 - Full-stack work on legacy Java with a JavaScript front end (mostly Ext JS) and Java / ORM / Oracle back end.
+
+<div class="cv-detailed-only">
 
 ## Overstock.com — Senior Developer
 
@@ -168,6 +171,8 @@ Fortran for modeling liquid-metal-cooled reactors; mathematical modeling; VAX/VM
 
 Multimedia information retrieval prototype using **X/Motif** and Unix.
 
+</div>
+
 # Selected projects and engagements
 
 Representative initiatives across employers (approximate periods where noted):
@@ -180,23 +185,30 @@ Representative initiatives across employers (approximate periods where noted):
 - **Groundskeeper** (Pivotal) — 2019: Elm, Kotlin; auto-provisioning of users, accounts, and virtual environments; Conductor (Netflix open-source workflow engine).
 - **Education** (Pivotal) — 2018: Java course code bases; nontrivial Git workflows. Authored and presented live courses on Java, Spring, and REST.
 - **Object Changes and Search** (Rally) — 2016–2017: EclipseLink, Oracle, Kafka data pipeline, Solr then Elasticsearch, Clojure, Datomic.
+
+<div class="cv-detailed-only">
+
 - **ALM Zuul** (Rally) — 2015: Clojure; authentication for agile lifecycle management.
 - **New Code Quality Dashboard** (Thoughtworks) — San Francisco, 2007: Ruby on Rails. Code-quality dashboard (complexity, cohesion, change-focused metrics).
 - **Ask Local** (Ask.com): maps, locale, and reviews search.
+
+</div>
 
 # Education
 
 ## Tufts University
 
-*September 1987 – June 1991*
+<p class="cv-education-date-range"><em>September 1987 – June 1991</em></p>
 
 B.A. in Mathematics and B.S. in Computer Science (2 degrees).
 
 ## The Ohio State University — Columbus
 
-*August 1991 – March 1993*
+<p class="cv-education-date-range"><em>August 1991 – March 1993</em></p>
 
 M.S. in Computer and Information Science, concentration in Computational Linguistics.
+
+<div class="cv-detailed-only">
 
 # References
 
@@ -207,4 +219,6 @@ Available upon request.
 - I'm an amateur polyglot! I speak seven languages to varying degrees of fluency. I am fluent in English, Spanish, and French.
 - I'm an avid traveler and have lived in Belgium, Costa Rica, Germany, and Hungary, in addition to the United States.
 - I love to cook (and eat), and am always interested in new techniques and flavors from around the world.
+
+</div>
 

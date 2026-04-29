@@ -76,6 +76,19 @@ html[data-bs-theme="dark"] .container-xxl.bd-layout {
     padding-top: 0.25rem !important;
 }
 
+/* CV abbreviated view (template button + .cv-detailed-only wrappers in cv.md) */
+.bd-title-bar .cv-tmi-btn {
+    max-width: min(100%, 20rem);
+}
+
+html.cv-abbrev .cv-detailed-only {
+    display: none !important;
+}
+
+html.cv-abbrev .cv-education-date-range {
+    display: none !important;
+}
+
 .bd-content h2 {
     color: var(--heading-h2-color);
 }
@@ -316,6 +329,10 @@ html[data-portal-palette="sage"][data-bs-theme="light"] {
     .navbar,
     .bd-toc,
     .footer {
+        display: none !important;
+    }
+
+    .cv-tmi-btn {
         display: none !important;
     }
 

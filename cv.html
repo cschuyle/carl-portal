@@ -107,9 +107,13 @@ education, and skills">
     <div class="container-xxl bd-gutter bd-layout mb-5">
       <main class="bd-main order-1">
 	
-	<!-- Tiltle -->
-	<h1 class="bd-intro ps-lg-2 pt-2" id="title">Carlton Schuyler</h1>
-	
+	<!-- Title -->
+		<div class="d-flex flex-column flex-md-row align-items-end align-items-md-center justify-content-md-between gap-2 bd-title-bar ps-lg-2 pt-2 w-100">
+	  <h1 class="bd-intro mb-0 text-start w-100 flex-grow-1 min-w-0" id="title">Carlton
+Schuyler</h1>
+	  <button type="button" id="cvTmiToggle" class="btn btn-sm btn-outline-secondary flex-shrink-0 cv-tmi-btn text-wrap text-end" aria-pressed="false">TMI — Just give me the abbreviated version</button>
+	</div>
+		
 		<!-- Table of Contents -->
 	<div class="bd-toc mt-lg-0 mb-lg-5 mt-3 mb-5 px-sm-1 text-body-secondary">
 	  <strong class="d-md-block d-none h6 my-2 ms-3">On this page</strong>
@@ -141,51 +145,6 @@ education, and skills">
       <li><a href="#ca-technologies-senior-software-engineer"
       id="toc-ca-technologies-senior-software-engineer">CA Technologies
       — Senior Software Engineer</a></li>
-      <li><a href="#overstock.com-senior-developer"
-      id="toc-overstock.com-senior-developer">Overstock.com — Senior
-      Developer</a></li>
-      <li><a href="#thoughtworks-consultant-senior-developer"
-      id="toc-thoughtworks-consultant-senior-developer">Thoughtworks —
-      Consultant / Senior Developer</a></li>
-      <li><a href="#deepdata-consultant"
-      id="toc-deepdata-consultant">DeepData — Consultant</a></li>
-      <li><a href="#ask.com-senior-research-engineer"
-      id="toc-ask.com-senior-research-engineer">Ask.com — Senior
-      Research Engineer</a></li>
-      <li><a
-      href="#aplicor-international-office-director-and-development-team-lead"
-      id="toc-aplicor-international-office-director-and-development-team-lead">Aplicor
-      International — Office Director and Development Team Lead</a></li>
-      <li><a href="#horizon-20-inc.-chief-software-architect"
-      id="toc-horizon-20-inc.-chief-software-architect">Horizon 20
-      Inc. — Chief Software Architect</a></li>
-      <li><a href="#intel-corporation-senior-programmer-analyst"
-      id="toc-intel-corporation-senior-programmer-analyst">Intel
-      Corporation — Senior Programmer / Analyst</a></li>
-      <li><a href="#explore-reasoning-systems-senior-consultant"
-      id="toc-explore-reasoning-systems-senior-consultant">ExpLore
-      Reasoning Systems — Senior Consultant</a></li>
-      <li><a
-      href="#american-management-systems-now-cgi-ams-senior-technical-staff"
-      id="toc-american-management-systems-now-cgi-ams-senior-technical-staff">American
-      Management Systems (now CGI-AMS) — Senior Technical Staff</a></li>
-      <li><a href="#explore-reasoning-systems-consultant"
-      id="toc-explore-reasoning-systems-consultant">ExpLore Reasoning
-      Systems — Consultant</a></li>
-      <li><a href="#tasc-member-of-technical-staff"
-      id="toc-tasc-member-of-technical-staff">TASC — Member of Technical
-      Staff</a></li>
-      <li><a
-      href="#iica-instituto-interamericano-de-cooperación-para-la-agricultura-intern"
-      id="toc-iica-instituto-interamericano-de-cooperación-para-la-agricultura-intern">IICA
-      (Instituto Interamericano de Cooperación para la Agricultura) —
-      Intern</a></li>
-      <li><a href="#argonne-national-laboratory-intern"
-      id="toc-argonne-national-laboratory-intern">Argonne National
-      Laboratory — Intern</a></li>
-      <li><a href="#gte-laboratories-summer-intern"
-      id="toc-gte-laboratories-summer-intern">GTE Laboratories — Summer
-      Intern</a></li>
       </ul></li>
       <li><a href="#selected-projects-and-engagements"
       id="toc-selected-projects-and-engagements">Selected projects and
@@ -198,8 +157,6 @@ education, and skills">
       id="toc-the-ohio-state-university-columbus">The Ohio State
       University — Columbus</a></li>
       </ul></li>
-      <li><a href="#references" id="toc-references">References</a></li>
-      <li><a href="#fun-facts" id="toc-fun-facts">Fun Facts</a></li>
       </ul>
 	    </nav>
 	  </div>
@@ -207,7 +164,7 @@ education, and skills">
 		
 	<!-- Main Content -->
 	<div class="bd-content ps-lg-2">
-	  <script>document.documentElement.classList.add("cv-page");</script>
+	  <script>document.documentElement.classList.add("cv-page", "cv-abbrev");</script>
   <p><strong>Contact:</strong> carl@dragnon.com      <strong>Home
   page:</strong> <a href="https://carlschuyler.com"
   class="uri">https://carlschuyler.com</a>     
@@ -313,6 +270,7 @@ education, and skills">
   <li>Full-stack work on legacy Java with a JavaScript front end (mostly
   Ext JS) and Java / ORM / Oracle back end.</li>
   </ul>
+  <div class="cv-detailed-only">
   <h2 id="overstock.com-senior-developer">Overstock.com — Senior
   Developer</h2>
   <p><em>November 2009 – December 2009 · 2 months</em></p>
@@ -436,6 +394,7 @@ education, and skills">
   <p><em>1991 · Waltham, Massachusetts · less than one year</em></p>
   <p>Multimedia information retrieval prototype using
   <strong>X/Motif</strong> and Unix.</p>
+  </div>
   <h1 id="selected-projects-and-engagements">Selected projects and
   engagements</h1>
   <p>Representative initiatives across employers (approximate periods
@@ -461,6 +420,9 @@ education, and skills">
   <li><strong>Object Changes and Search</strong> (Rally) — 2016–2017:
   EclipseLink, Oracle, Kafka data pipeline, Solr then Elasticsearch,
   Clojure, Datomic.</li>
+  </ul>
+  <div class="cv-detailed-only">
+  <ul>
   <li><strong>ALM Zuul</strong> (Rally) — 2015: Clojure; authentication
   for agile lifecycle management.</li>
   <li><strong>New Code Quality Dashboard</strong> (Thoughtworks) — San
@@ -469,15 +431,21 @@ education, and skills">
   <li><strong>Ask Local</strong> (Ask.com): maps, locale, and reviews
   search.</li>
   </ul>
+  </div>
   <h1 id="education">Education</h1>
   <h2 id="tufts-university">Tufts University</h2>
-  <p><em>September 1987 – June 1991</em></p>
+  <p class="cv-education-date-range">
+  <em>September 1987 – June 1991</em>
+  </p>
   <p>B.A. in Mathematics and B.S. in Computer Science (2 degrees).</p>
   <h2 id="the-ohio-state-university-columbus">The Ohio State University
   — Columbus</h2>
-  <p><em>August 1991 – March 1993</em></p>
+  <p class="cv-education-date-range">
+  <em>August 1991 – March 1993</em>
+  </p>
   <p>M.S. in Computer and Information Science, concentration in
   Computational Linguistics.</p>
+  <div class="cv-detailed-only">
   <h1 id="references">References</h1>
   <p>Available upon request.</p>
   <h1 id="fun-facts">Fun Facts</h1>
@@ -489,6 +457,7 @@ education, and skills">
   <li>I love to cook (and eat), and am always interested in new
   techniques and flavors from around the world.</li>
   </ul>
+  </div>
 	</div>
       </main>
     </div>
@@ -594,5 +563,32 @@ education, and skills">
 	  hljs.highlightAll();
       });
     </script>
-  </body>
+        <script>
+      document.addEventListener("DOMContentLoaded", () => {
+	  const btn = document.getElementById("cvTmiToggle");
+	  if (!btn) return;
+	  const fullLabel = "TMI — Just give me the abbreviated version";
+	  const shortLabel = "Show full CV";
+	  const storageKey = "cvAbbrevMode";
+	  function applyAbbrev(on) {
+	      document.documentElement.classList.toggle("cv-abbrev", on);
+	      btn.textContent = on ? shortLabel : fullLabel;
+	      btn.setAttribute("aria-pressed", on ? "true" : "false");
+	      try {
+		  localStorage.setItem(storageKey, on ? "1" : "0");
+	      } catch (e) {}
+	  }
+	  btn.addEventListener("click", () => {
+	      applyAbbrev(!document.documentElement.classList.contains("cv-abbrev"));
+	  });
+	  try {
+	      const stored = localStorage.getItem(storageKey);
+	      if (stored === null || stored === "1") applyAbbrev(true);
+	      else applyAbbrev(false);
+	  } catch (e) {
+	      applyAbbrev(true);
+	  }
+      });
+    </script>
+      </body>
 </html>
