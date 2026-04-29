@@ -1,31 +1,36 @@
 # Public-facing Me Portal
 *Forked from https://github.com/ashki23/pandoc-bootstrap*
 
-Build: `./build.sh`
+## Development
+
+```
+make watch
+```
+
+Under the hood this does;
 
 Watch and rebuild (but you still get to refresh the browser): `./watch-render.sh`
 
+... which in turn does `./build.sh`
 
-# Deploy
 
-Cloudflare Pages, BOOM, just link github repo - The generated index.html file *IS* the home page.
+## Deploy
 
-Depends on you comitting latest generated stuff (`build.sh`) to github.
+```
+make deploy
+```
+
+Using Cloudflare Pages, so BOOM, just link github repo - The generated index.html file *IS* the home page.
+
+Depends on you comitting latest generated stuff (`build.sh`) to github. There is a pre-hook that checks this.
 
 Cloudflare URL: https://carl-portal.pages.dev/
 
 
-# Config Cloudflare Pages
+## Config Cloudflare Pages
 
-cloudflare.com, Pages, create, link to Github account
-
-FORGOT: Deploy to: /
-
-To fix supposedly:
-```
-npm install -g wrangler
-wrangler login
-wrangler pages deploy . --project-name carl-portal
-```
-
-BUT not working, frown.
+cloudflare.com
+- Pages
+- create
+- link to Github account
+- Deploy to: /
