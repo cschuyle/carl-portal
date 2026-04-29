@@ -14,7 +14,7 @@ description: "Professional experience, education, and skills"
 
 I'm a **software generalist**, meaning I am a full-stack developer and hands-on coding architect. I am strongest at **backend distributed systems and data engineering**. I'm enthusiastic about AI-assisted development, and good old clean, lean software development, agile delivery, and collaboration.
 
-[I have worked in software development for 30+ years. ]{.cv-detailed-only}I am fascinated by software related to data and semantic processing, e.g. machine learning, computational linguistics, natural language processing, and information retrieval. This dovetails nicely with modern AI driven development.
+[I have worked in software development for 30+ years. ]{.cv-detailed-only} I am fascinated by software related to data and semantic processing, e.g. machine learning, computational linguistics, natural language processing, and information retrieval. This dovetails nicely with modern AI driven development.
 
 ::: {.cv-detailed-only}
 

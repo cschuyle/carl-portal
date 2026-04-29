@@ -5,6 +5,7 @@ cd "$ROOT"
 
 COMMON="--template template.html --include-in-header header.html --include-after-body footer.html --standalone --no-highlight --toc --toc-depth 2 --mathjax"
 STRIP_FILTER="$ROOT/filters/strip-cv-detailed.lua"
+UNWRAP_FILTER="$ROOT/filters/unwrap-cv-detailed.lua"
 
 pandoc index.md -o index.html --include-before-body navbar.html $COMMON
 
@@ -18,4 +19,5 @@ sed "s|__BUILD_DATE__|${BUILD_DATE}|g" cv.md | pandoc -f markdown -o cv.html \
 
 sed "s|__BUILD_DATE__|${BUILD_DATE}|g" cv.md | pandoc -f markdown -o full-cv.html \
   --include-before-body navbar-cv-full.html $COMMON \
+  --lua-filter "$UNWRAP_FILTER" \
   -M cv_title_nav=true
