@@ -15,7 +15,7 @@ build:
 	./build.sh
 
 deploy: hooks build
-	@git diff --quiet HEAD -- index.html cv.html 2>/dev/null || (git add index.html cv.html && git commit -m "chore: rebuild static HTML ($$(date +%Y-%m-%d))")
+	@git diff --quiet HEAD -- index.html cv.html full-cv.html 2>/dev/null || (git add index.html cv.html full-cv.html && git commit -m "chore: rebuild static HTML ($$(date +%Y-%m-%d))")
 	@if [ -n "$$(git status --porcelain)" ]; then \
 		echo >&2 "deploy: uncommitted changes remain — commit or stash before pushing."; \
 		git status --short >&2; \

@@ -40,10 +40,14 @@
       <main class="bd-main order-1">
 	
 	<!-- Title -->
-	$if(cv_tmi_toggle)$
+	$if(cv_title_nav)$
 	<div class="d-flex flex-column flex-md-row align-items-end align-items-md-center justify-content-md-between gap-2 bd-title-bar ps-lg-2 pt-2 w-100">
 	  $if(title)$<h1 class="bd-intro mb-0 text-start w-100 flex-grow-1 min-w-0" id="title">$title$</h1>$endif$
-	  <button type="button" id="cvTmiToggle" class="btn btn-sm btn-outline-secondary flex-shrink-0 cv-tmi-btn text-wrap text-end" aria-pressed="false">TMI — Just give me the abbreviated version</button>
+	  $if(abbreviated_cv)$
+	  <a href="full-cv.html" class="btn btn-sm btn-outline-secondary flex-shrink-0 cv-version-btn text-wrap text-end">Full CV</a>
+	  $else$
+	  <a href="cv.html" class="btn btn-sm btn-outline-secondary flex-shrink-0 cv-version-btn text-wrap text-end">Abbreviated CV</a>
+	  $endif$
 	</div>
 	$else$
 	$if(title)$<h1 class="bd-intro ps-lg-2 pt-2" id="title">$title$</h1>$endif$
@@ -159,34 +163,5 @@
 	  hljs.highlightAll();
       });
     </script>
-    $if(cv_tmi_toggle)$
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-	  const btn = document.getElementById("cvTmiToggle");
-	  if (!btn) return;
-	  const fullLabel = "TMI — Just give me the abbreviated version";
-	  const shortLabel = "Show full CV";
-	  const storageKey = "cvAbbrevMode";
-	  function applyAbbrev(on) {
-	      document.documentElement.classList.toggle("cv-abbrev", on);
-	      btn.textContent = on ? shortLabel : fullLabel;
-	      btn.setAttribute("aria-pressed", on ? "true" : "false");
-	      try {
-		  localStorage.setItem(storageKey, on ? "1" : "0");
-	      } catch (e) {}
-	  }
-	  btn.addEventListener("click", () => {
-	      applyAbbrev(!document.documentElement.classList.contains("cv-abbrev"));
-	  });
-	  try {
-	      const stored = localStorage.getItem(storageKey);
-	      if (stored === null || stored === "1") applyAbbrev(true);
-	      else applyAbbrev(false);
-	  } catch (e) {
-	      applyAbbrev(true);
-	  }
-      });
-    </script>
-    $endif$
   </body>
 </html>

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Rebuild index.html and cv.html via ./build.sh when sources change; print local URLs; optional watch loop.
+# Rebuild index.html, cv.html, and full-cv.html via ./build.sh when sources change; print local URLs; optional watch loop.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
@@ -30,7 +30,7 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-WATCH=(*.md template.html header.html navbar.html navbar-cv.html footer.html styles.css)
+WATCH=(*.md template.html header.html navbar.html navbar-cv-abbrev.html navbar-cv-full.html filters/*.lua footer.html styles.css)
 
 collect_watch_files() {
   WATCH_FILES=()
@@ -57,11 +57,14 @@ print_links() {
   echo ""
   echo "Rendered:  $ROOT/index.html"
   echo "            $ROOT/cv.html"
+  echo "            $ROOT/full-cv.html"
   echo "Local URL:  file://$ROOT/index.html"
   echo "            file://$ROOT/cv.html"
+  echo "            file://$ROOT/full-cv.html"
   if $SERVE; then
     echo "HTTP URL:  http://127.0.0.1:${PORT}/index.html"
     echo "            http://127.0.0.1:${PORT}/cv.html"
+    echo "            http://127.0.0.1:${PORT}/full-cv.html"
   fi
   echo ""
 }

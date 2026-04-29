@@ -1,16 +1,17 @@
 #!/bin/sh
-# Fail commits if built cv.html still contains the source placeholder (run ./build.sh).
+# Fail commits if built CV HTML still contains the source placeholder (run ./build.sh).
 set -e
 REPO_ROOT=$(git rev-parse --show-toplevel)
 cd "$REPO_ROOT"
 
-if [ ! -f cv.html ]; then
-	exit 0
-fi
-
-if grep -q '__BUILD_DATE__' cv.html; then
-	echo "pre-commit: cv.html still contains __BUILD_DATE__. Run ./build.sh and git add cv.html." >&2
-	exit 1
-fi
+for f in cv.html full-cv.html; do
+	if [ ! -f "$f" ]; then
+		continue
+	fi
+	if grep -q '__BUILD_DATE__' "$f"; then
+		echo "pre-commit: $f still contains __BUILD_DATE__. Run ./build.sh and git add $f." >&2
+		exit 1
+	fi
+done
 
 exit 0

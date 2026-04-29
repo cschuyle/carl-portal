@@ -2,10 +2,9 @@
 title: "Carlton Schuyler"
 author: "Carlton Schuyler"
 description: "Professional experience, education, and skills"
-cv_tmi_toggle: true
 ---
 
-<script>document.documentElement.classList.add("cv-page", "cv-abbrev");</script>
+<script>document.documentElement.classList.add("cv-page");</script>
 
 **Contact:** carl@dragnon.com &nbsp;&nbsp;&nbsp;&nbsp; **Home page:** <https://carlschuyler.com> &nbsp;&nbsp;&nbsp;&nbsp; **Updated:** __BUILD_DATE__
 
@@ -13,14 +12,15 @@ cv_tmi_toggle: true
 
 # About
 
-I have worked in software development for 30+ years. I am fascinated by software related to data and semantic processing, e.g. machine learning, computational linguistics, natural language processing, and information retrieval. 
+I'm a **software generalist**, meaning I am a full-stack developer and hands-on coding architect. I am strongest at **backend distributed systems and data engineering**. I'm enthusiastic about AI-assisted development, and good old clean, lean software development, agile delivery, and collaboration.
 
-Aside from coding and designing, I've authored and taught courses on Java Spring enterprise architecture.
+[I have worked in software development for 30+ years. ]{.cv-detailed-only}I am fascinated by software related to data and semantic processing, e.g. machine learning, computational linguistics, natural language processing, and information retrieval. This dovetails nicely with modern AI driven development.
 
-These days I'd call myself a **generalist** software developer, biased toward backend distributed systems, and data engineering. I'm enthusiastic about clean, lean software development, agile delivery, and collaboration.
+::: {.cv-detailed-only}
 
-I've never met a programming language I didn't appreciate. I'm happy with my hands on the keyboard and unhappy in a silo: I value collaboration and transparency, whereas inflexible organization and rigid process really get me down.
+Aside from coding and designing, I’ve authored and taught courses on Java Spring enterprise architecture and API design.
 
+:::
 
 ## Technical directions
 
@@ -53,7 +53,7 @@ Infrastructure behind **Visual Builder**: services to create and deploy web appl
 *(Formerly VMware; VMware acquired Pivotal December 31, 2019; Broadcom acquired VMware in a later consolidation.)*
 
 - Continuation of the Pivotal / VMware platform and customer-facing solutions work below; engagement spanned the corporate transitions.
-- **VMware / Pivotal era:** Same Staff Solutions Architect track from mid-2018; oldest payslip on file from Pivotal is September 2018.
+- Authored an delivered in-person courses on Cloud Native Java applications. After 2020, they became online and self-paced. Example: Building REST APIs using Spring Boot (https://spring.academy/courses/building-a-rest-api-with-spring-boot).
 
 ## Thoughtworks — Lead Developer
 
@@ -61,7 +61,11 @@ Infrastructure behind **Visual Builder**: services to create and deploy web appl
 
 Consulting developer embedded with customer teams on site: cloud software delivery and helping teams adopt agile practice—pair programming, test-driven development, and balanced teams.
 
+::: {.cv-detailed-only}
+
 - Locations: San Antonio, Cincinnati.
+
+:::
 
 ## CA Technologies — Senior Software Engineer
 
@@ -69,19 +73,16 @@ Consulting developer embedded with customer teams on site: cloud software delive
 
 *(CA acquired Rally Software July 2015; CA was later acquired by Broadcom.)*
 
-CA's Agile business unit built SaaS tools for agile teams. I worked primarily on **Rally Software** (also known as CA Agile Central): an agile lifecycle management product for developers and stakeholders, as a generalist developer. Roles also included DevOps, deployment, support, technical leadership, mentoring, advocating for innovation, and presenting.
+I worked on the **Rally Software** product (also known as CA Agile Central): an Agile Lifecycle Project Management SaaS product. I developed in Java and Javascript, and performed various roles as needed: DevOps, deployment, support, technical leadership, mentoring, advocating for innovation, and presenting.
 
-Process was grounded in agile and lean practice: continuous deployment, Scrum, pairing, TDD, and Kanban/lean. The team helped introduce the SAFe enterprise agile-at-scale framework.
+- Completely refactored existing test suites. Decreased test execution time by orders of magnitude.
+- Created new modules for security and scalability, in Scala and Clojure, using Kafka. 
+- Introduced Kafka, Hazelcast, and Datomic to drastically reduce latency between data change and user-facing changes.
+- Modernized and expanded full-text search (Solr upgrade, faceting, boosting, relevance); modularized the system and moved search stack toward **Elasticsearch**.
 
-**Back-end focus** on a large legacy Java application and newer **Clojure** components: performance work, refactoring for effective use of EclipseLink ORM, quality through pairing and pull-request review, Kafka and Hazelcast for scalability. Other technologies included Oracle, GitHub, Linux, and Docker.
+We created an agile and lean process: Continuous Deployment, Scrum, pairing, TDD, and Kanban/lean. The team helped introduce the SAFe enterprise agile-at-scale framework.
 
-**Notable project threads:**
-
-- Modernized and expanded full-text search (Solr upgrade, faceting, boosting, relevance); re-architected deployment and moved search stack toward **Elasticsearch**.
-- **Object change notification** infrastructure to collect, aggregate, and distribute changes across components and external applications—Clojure-centric greenfield work including **Datomic**.
-- Full-stack work on legacy Java with a JavaScript front end (mostly Ext JS) and Java / ORM / Oracle back end.
-
-<div class="cv-detailed-only">
+::: {.cv-detailed-only}
 
 ## Overstock.com — Senior Developer
 
@@ -171,7 +172,7 @@ Fortran for modeling liquid-metal-cooled reactors; mathematical modeling; VAX/VM
 
 Multimedia information retrieval prototype using **X/Motif** and Unix.
 
-</div>
+:::
 
 # Selected projects and engagements
 
@@ -186,29 +187,37 @@ Representative initiatives across employers (approximate periods where noted):
 - **Education** (Pivotal) — 2018: Java course code bases; nontrivial Git workflows. Authored and presented live courses on Java, Spring, and REST.
 - **Object Changes and Search** (Rally) — 2016–2017: EclipseLink, Oracle, Kafka data pipeline, Solr then Elasticsearch, Clojure, Datomic.
 
-<div class="cv-detailed-only">
+::: {.cv-detailed-only}
 
 - **ALM Zuul** (Rally) — 2015: Clojure; authentication for agile lifecycle management.
 - **New Code Quality Dashboard** (Thoughtworks) — San Francisco, 2007: Ruby on Rails. Code-quality dashboard (complexity, cohesion, change-focused metrics).
 - **Ask Local** (Ask.com): maps, locale, and reviews search.
 
-</div>
+:::
 
 # Education
 
 ## Tufts University
 
-<p class="cv-education-date-range"><em>September 1987 – June 1991</em></p>
+::: {.cv-education-date-range}
+
+*September 1987 – June 1991*
+
+:::
 
 B.A. in Mathematics and B.S. in Computer Science (2 degrees).
 
 ## The Ohio State University — Columbus
 
-<p class="cv-education-date-range"><em>August 1991 – March 1993</em></p>
+::: {.cv-education-date-range}
+
+*August 1991 – March 1993*
+
+:::
 
 M.S. in Computer and Information Science, concentration in Computational Linguistics.
 
-<div class="cv-detailed-only">
+::: {.cv-detailed-only}
 
 # References
 
@@ -220,5 +229,5 @@ Available upon request.
 - I'm an avid traveler and have lived in Belgium, Costa Rica, Germany, and Hungary, in addition to the United States.
 - I love to cook (and eat), and am always interested in new techniques and flavors from around the world.
 
-</div>
+:::
 
